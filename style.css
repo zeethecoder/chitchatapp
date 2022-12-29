@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+color: rgb(29, 65, 97);
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #3d3d3df1;
+}
+
+.header {
+  position:relative;
+  /* text-align:center; */
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.inner-header.flex {
+    height: 75vh;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:125px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+@media (max-width: 1400){
+
+}    
+
+
+.wrapper{
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+                color: rgb(29, 65, 97);
+                
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 10px;
+    font-style: normal;
+  }
+
+  
+.form{
+    padding: 20px 35px;
+}
+
+.form header{
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(118 118 118 / 32%);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.toggle{
+    position: relative;
+    top: -18px;
+    right: 21px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+input#password {
+    margin-bottom: -10px;
+}
+
+
+.form form{
+    margin: 20px 0;
+}
+
+.form form .error-txt{
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form form .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+
+.field.button {
+    margin-top: -2px;
+}
+
+.form form .input input{
+    height: 40px;
+    width: 94%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form form .field input{
+    outline: none;
+}
+
+.name-details{
+    display: flex;
+    width: 97%;
+}
+
+
+.name-details .field:first-child{
+    margin-right: 35px;
+}
+
+.field label{
+    margin-bottom: 4px;
+}
+.image input{
+    font-size: 10px;
+    margin-top: 5px;
+} 
+
+.button {
+    display: flex;
+}
+
+
+.button input{
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-link{
+    margin-left: 4px;
+    text-decoration: none;
+    color: rgb(29, 65, 97)
+}
+.login-link:hover{
+    text-decoration: underline;
+    color: rgb(0, 120, 180);
+}
+
+
+/* Users Area Code */
+
+
+.users{
+    padding: 25px 30px;
+}
+.userlist-a,
+.users-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    color: black;
+}
+.users-header{
+    padding-bottom: 20px;
+}
+.userlist-a{
+    padding-top: 16px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom-color: #efefef;
+}
+
+.userlist-a:last-child{
+    border: none;
+    margin-bottom: 2px;
+}
+
+.profile-img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-img2{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.users-content{
+    display: flex;
+}
+.details-2{
+    margin-left: 15px;
+}
+
+i.fa-solid.fa-circle-dot {
+    color: green;
+    font-size: 12px;
+}
+
+.details{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.details span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.details-2{
+    color: #000;
+}
+
+
+.logout{
+    background: linear-gradient(20deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    font-size: 17px;
+    padding: 7px 15px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.users-search{
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-magnifying-glass{
+
+}
+.active-now{
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.text{
+    font-size: 15px;
+}
+
+.username-searchbar{
+    position: absolute;
+    height: 40px;
+    width: calc(100% - 70px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-btn{
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #fff; 
+    background: linear-gradient(20deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+}
+
+
+.user-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+.user-list::-webkit-scrollbar{
+    width: 0;
+}
+
+i.fa-solid.fa-circle-dot .offline {
+    color: #ccc;
+}
